@@ -1,0 +1,505 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook - K1 - M09.5</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+        <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Dar la bienvenida a los Genios y preparar el ambiente para la misión.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 2 “Bienvenida” y saluda a los niños mientras muestras el logo de Gnius Club. Luego introduce el tema del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, Code SQUAD! Bienvenidos al Jardín Encantado. Hoy tenemos una misión muy especial: ayudar a Aru a organizar las flores mágicas para que se abran en la secuencia correcta. Si lo logramos, el jardín recuperará su magia y todos en el bosque podrán celebrar la gran fiesta. Pero primero, necesitamos preparar nuestras mentes para la misión. ¡Vamos a calentar nuestros cerebros juntos!</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 3 “Gimnasio CODE SQUAD” e indica que antes de comenzar, haremos un ejercicio para que nuestros cerebros estén listos.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Vamos, Code SQUAD! Antes de resolver el reto del Jardín Encantado, necesitamos activar nuestras mentes. Vamos a hacer un ejercicio siguiendo las indicaciones de la canción. ¡Presten mucha atención para que todo salga perfecto!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-secuenciacion')">
+        <div class="title">🎶 Actividad 2: Baile de Secuenciación ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Preparar a los niños para la misión con un ejercicio de secuenciación a través del baile.</div>
+    </div>
+    <div id="baile-secuenciacion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 4 “Baile de Secuenciación” e introduce la canción, explicando la dinámica.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que estamos listos, ¡es momento de disfrutar el baile! Vamos a movernos y seguir las indicaciones que escucharemos en la canción. No importa si no nos sale a la primera, lo importante es intentarlo y divertirnos. ¡A bailar, Code SQUAD!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">📖 Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Introducir a los niños en el contexto de la misión mediante la historia y explicación del reto.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de un cuenta cuentos y narra la historia del Jardín Encantado.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy nos embarcaremos en una misión mágica. Nuestro amigo Aru cuida del Jardín Encantado, donde crecen cinco tipos de flores especiales: Rosas, Tulipanes, Margaritas, Lirios y Girasoles. Cada flor tiene su propio momento para brillar, pero algo inesperado ha sucedido…<br>
+                Una fuerte ráfaga de viento desordenó todas las flores justo antes de que se abrieran. Y aquí está el problema: estas flores mágicas solo se abren cada 100 años y deben hacerlo en el orden correcto. Si no seguimos la secuencia adecuada, la magia del jardín se perderá y los habitantes del bosque no podrán celebrar la gran fiesta bajo la luz de las flores. ¡Tenemos que ayudarlos a encontrar el orden perfecto para que todas florezcan a tiempo!</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 y explica el reto al CODE SQUAD de forma clara y divertida.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Para restaurar la magia del Jardín Encantado, tenemos que reordenar las flores en la secuencia correcta. Aquí es donde necesitamos su ayuda. Cada flor tiene su momento especial para abrirse, pero hay que seguir las reglas mágicas que nos dio Aru.<br>
+                Vamos a representar cada flor con bloques de colores: las Rosas, los Tulipanes, las Margaritas, los Lirios y los Girasoles. Necesitamos organizarlos en la secuencia que permitirá que florezcan en el orden correcto. Recuerden, si no seguimos la secuencia, la magia se perderá. ¡Confío en que juntos lo lograremos!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Fomentar el trabajo colaborativo al formar equipos de dos para la misión.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 “Formación de Equipos” y organiza a los niños en pares para la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Cuando dos mentes trabajan juntas, ¡pasan cosas asombrosas! Como dice el dicho: “Dos cabezas piensan mejor que una.” Imagina que cada uno de ustedes es una pieza de un gran rompecabezas. ¡Y al unirse con su compañero, completarán la imagen para resolver el reto del Jardín Encantado!<br>
+                Hoy necesitamos unir nuestras fuerzas para reordenar las flores mágicas. Así que busquen a un compañero para trabajar en esta misión. Si tenemos un número impar, ¡yo seré parte del equipo para que nadie se quede sin pareja!</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 y verifica que todos los niños estén organizados y listos para trabajar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Ya todos tienen pareja? ¡Perfecto! Recuerden que trabajar en equipo significa compartir ideas y ayudarse mutuamente. Cuanto más colaboren, ¡más divertido será el reto! Si en algún momento necesitan ayuda, levanten la mano y yo estaré aquí para guiarlos. ¡Vamos a por ello!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('codigo-visual')">
+        <div class="title">🎨 Actividad 5: Creación del Código Visual en Papel ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Representar flores usando bloques de colores para desarrollar habilidades de abstracción.</div>
+    </div>
+    <div id="codigo-visual" class="content">
+        <div id="activity-5-content">
+            <!-- Aquí se renderizarán los pasos dinámicos -->
+        </div>
+        <p><strong>Total:</strong> <span id="activity-5-total-time"></span></p>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('intercambio-codigos')">
+        <div class="title">🔄 Actividad 6: Intercambio de Códigos ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Fomentar la comprensión colaborativa intercambiando códigos entre equipos.</div>
+    </div>
+    <div id="intercambio-codigos" class="content">
+        <div id="activity-6-content">
+            <!-- Aquí se renderizarán los pasos dinámicos -->
+        </div>
+        <p><strong>Total:</strong> <span id="activity-6-total-time"></span></p>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('obstaculo-cuartel')">
+        <div class="title">🚧 Actividad 7: Mensaje del Cuartel y Construcción con Bloques ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Resolver un obstáculo introducido por el cuartel general usando códigos de rescate.</div>
+    </div>
+    <div id="obstaculo-cuartel" class="content">
+        <div id="activity-7-content">
+            <!-- Aquí se renderizarán los pasos dinámicos -->
+        </div>
+        <p><strong>Total:</strong> <span id="activity-7-total-time"></span></p>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🎯 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Cierre de la clase con reflexión sobre lo aprendido.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la DIAPOSITIVA 30, cuenta el final de la historia y realiza la reflexión con preguntas.</td>
+                <td>
+                    <strong>DIÁLOGO SUGERIDO:</strong> 
+                    ¡CODE SQUAD! ¡Lo logramos! El viento mágico dejó de soplar, y las flores finalmente florecieron en la secuencia perfecta. ¡Qué bonito jardín hemos creado! Gracias a su esfuerzo y trabajo en equipo, el girasol, el lirio, la margarita, el tulipán y la rosa están más radiantes que nunca.
+                    <br><br>
+                    Ahora quiero preguntarles algunas cosas para que recordemos lo que aprendimos hoy:
+                    <ul>
+                        <li>¿Por qué fue importante seguir el orden en que las flores debían florecer?</li>
+                        <li>¿Cómo los ayudaron los códigos a organizar las flores?</li>
+                        <li>¿Qué fue lo más divertido de trabajar en equipo?</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+               <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+        }
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        var level = document.getElementById("class-level").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+        document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+        var steps = {
+    "K1": {
+        "5.1": [
+            { 
+                "step": 1, 
+                "time": { "30": 1, "40": 1, "50": 1 }, 
+                "accion": "Reproduce la DIAPOSITIVA 9 y presenta el reto.", 
+                "dialogo": "¡CODE SQUAD! En nuestro jardín hay tres flores mágicas: rosa, girasol y tulipán. Ustedes van a dibujar estas flores y elegir dos bloques para cada una. ¡Vamos a ver cómo representan su jardín mágico!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 2, "40": 2, "50": 2 }, 
+                "accion": "Reproduce la DIAPOSITIVA 10 y reparte los materiales.", 
+                "dialogo": "Aquí tienen su papel y bloques, CODE SQUAD. Dibujen las flores y coloquen dos bloques por flor. Recuerden que pueden usar los colores que prefieran. ¡Manos a la obra!" 
+            },
+            { 
+                "step": 3, 
+                "time": { "30": 5, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 11 y acompaña el proceso.", 
+                "dialogo": "¡Excelente trabajo, CODE SQUAD! Dibujen sus flores y asignen sus dos bloques. ¡Nuestro jardín está tomando forma!" 
+            }
+        ],
+        "6": [
+            { 
+                "step": 1, 
+                "time": { "30": 2, "40": 2, "50": 2 }, 
+                "accion": "Reproduce la DIAPOSITIVA 18 y recoge los códigos creados.", 
+                "dialogo": "¡CODE SQUAD! Ahora vamos a intercambiar nuestros códigos. Voy a recoger los suyos y darles uno nuevo de otro equipo. Cada grupo usará el código de otro para organizar las flores. ¡Es como un secreto compartido!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 7, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 19 y entrega los códigos intercambiados.", 
+                "dialogo": "¡CODE SQUAD, a construir! Usen el código que les di para colocar los bloques de acuerdo con las flores que dibujaron. ¡Recuerden, cada flor necesita dos bloques!" 
+            }
+        ],
+        "7": [
+            { 
+                "step": 1, 
+                "time": { "30": 3, "40": 4, "50": 5 }, 
+                "accion": "Reproduce la DIAPOSITIVA 24 y cuenta el mensaje del obstáculo con tono de aventura.", 
+                "dialogo": "¡CODE SQUAD! ¡Tenemos una emergencia! Justo cuando las flores mágicas iban a florecer en la secuencia correcta, un viento mágico ha desordenado algunas de ellas. ¡Oh no! Pero no se preocupen, el cuartel nos ha enviado un nuevo código para resolverlo. ¡Vamos a trabajar juntos para que el jardín vuelva a florecer!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 7, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 25 y entrega el nuevo código.", 
+                "dialogo": "En la pantalla tienen un código nuevo. Cada flor necesita dos bloques para florecer. ¡Vamos a usarlo para que el girasol, la margarita y el tulipán vuelvan a florecer! ¡Vamos CODE SQUAD! ¡Podemos hacerlo!" 
+            }
+        ]
+    },
+   "K2": {
+        "5.2": [
+            { 
+                "step": 1, 
+                "time": { "30": 1, "40": 1, "50": 1 }, 
+                "accion": "Reproduce la DIAPOSITIVA 12 y presenta el reto.", 
+                "dialogo": "¡CODE SQUAD! Ahora tenemos cuatro flores: rosa, girasol, tulipán y margarita. Cada flor necesita dos bloques para representarse. ¡Elijan los bloques que quieran y comencemos!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 2, "40": 2, "50": 2 }, 
+                "accion": "Reproduce la DIAPOSITIVA 13 y entrega los materiales.", 
+                "dialogo": "¡Aquí tienen su papel y bloques! Dibujen cada flor y coloquen dos bloques al lado de cada una." 
+            },
+            { 
+                "step": 3, 
+                "time": { "30": 5, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 14 y guía el proceso.", 
+                "dialogo": "¡Perfecto, CODE SQUAD! Dibujen las flores y asignen dos bloques para cada una. ¡Estamos creando un jardín increíble!" 
+            }
+        ],
+        "6": [
+            { 
+                "step": 1, 
+                "time": { "30": 2, "40": 2, "50": 2 }, 
+                "accion": "Reproduce la DIAPOSITIVA 20 y recoge los códigos.", 
+                "dialogo": "¡CODE SQUAD! Vamos a intercambiar los códigos y construir con el trabajo de otro equipo. ¡Es como si compartiéramos pistas para resolver el jardín mágico!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 7, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 21 y entrega los códigos.", 
+                "dialogo": "Usen los códigos para organizar las flores con dos bloques cada una. ¡Recuerden, este jardín necesita girasoles, tulipanes, margaritas y rosas bien ordenadas!" 
+            }
+        ],
+        "7": [
+            { 
+                "step": 1, 
+                "time": { "30": 3, "40": 4, "50": 5 }, 
+                "accion": "Reproduce la DIAPOSITIVA 26 y transmite el mensaje con emoción.", 
+                "dialogo": "¡CODE SQUAD! El viento mágico ha desordenado el jardín. ¡Las flores no florecen como deberían! Pero tenemos una misión. El cuartel nos ha enviado un nuevo código para colocar las flores en el orden correcto. ¡Juntos lo lograremos!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 7, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 27 y entrega el nuevo código.", 
+                "dialogo": "Cada flor necesita dos bloques para florecer correctamente. Tenemos que organizar las cuatro flores: girasol, margarita, tulipán y rosa. ¡A construir y devolverle la magia al jardín!" 
+            }
+        ]
+},
+    "K3": {
+        "5.3": [
+            { 
+                "step": 1, 
+                "time": { "30": 1, "40": 1, "50": 1 }, 
+                "accion": "Reproduce la DIAPOSITIVA 15 y presenta el reto.", 
+                "dialogo": "¡CODE SQUAD! Tenemos cinco flores mágicas: rosa, girasol, tulipán, margarita y lirio. Cada flor necesita tres bloques para representarse. ¡Elijan sus bloques y empecemos!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 2, "40": 2, "50": 2 }, 
+                "accion": "Reproduce la DIAPOSITIVA 16 y reparte los materiales.", 
+                "dialogo": "Aquí tienen su papel y bloques. Dibujen las flores y coloquen tres bloques por cada una. Pueden elegir los colores que quieran. ¡A trabajar!" 
+            },
+            { 
+                "step": 3, 
+                "time": { "30": 5, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 17 y acompaña el proceso.", 
+                "dialogo": "¡Increíble, CODE SQUAD! Dibujen cada flor y coloquen sus tres bloques. ¡Vamos a dejar el jardín perfecto para la misión!" 
+            }
+        ],
+        "6": [
+            { 
+                "step": 1, 
+                "time": { "30": 2, "40": 2, "50": 2 }, 
+                "accion": "Reproduce la DIAPOSITIVA 22 y recoge los códigos.", 
+                "dialogo": "¡CODE SQUAD! Ahora vamos a usar los códigos de otros equipos para construir el jardín más mágico. ¡Cada flor necesita tres bloques y debemos asegurarnos de que sigan las reglas mágicas!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 7, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 23 y entrega los códigos.", 
+                "dialogo": "Usen los códigos intercambiados para organizar las cinco flores mágicas: girasol, lirio, tulipán, margarita y rosa. ¡Recuerden seguir las reglas que aprendimos!" 
+            }
+        ],
+        "7": [
+            { 
+                "step": 1, 
+                "time": { "30": 3, "40": 4, "50": 5 }, 
+                "accion": "Reproduce la DIAPOSITIVA 28 y narra el mensaje del cuartel.", 
+                "dialogo": "¡CODE SQUAD! El viento mágico ha cambiado la secuencia de las flores. Pero no se preocupen, el cuartel ha enviado un nuevo código especial. Cada flor necesita tres bloques. ¡Trabajemos para que el girasol, lirio, tulipán, margarita y rosa vuelvan a florecer en el orden correcto!" 
+            },
+            { 
+                "step": 2, 
+                "time": { "30": 7, "40": 10, "50": 10 }, 
+                "accion": "Reproduce la DIAPOSITIVA 29 y entrega el código.", 
+                "dialogo": "¡Manos a la obra, CODE SQUAD! Usen los tres bloques para cada flor y sigan las reglas que aprendimos. ¡Vamos a asegurarnos de que todas las flores mágicas vuelvan a florecer!" 
+            }
+        ]
+    }
+};
+
+
+
+        // Mostrar u ocultar actividades según el nivel seleccionado
+        var activities = {
+            "activity-0": true,
+            "activity-1": true,
+            "activity-2": true,
+            "activity-3": true,
+            "activity-4": true,
+            "activity-5": true,
+            "activity-6": true,
+            "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+            "activity-8": true
+        };
+
+        Object.keys(activities).forEach(function(activityId) {
+            var activityElement = document.getElementById(activityId);
+            if (activities[activityId]) {
+                activityElement.style.display = "block";
+            } else {
+                activityElement.style.display = "none";
+            }
+        });
+
+        // Renderizar los pasos dinámicamente en las tablas de actividades 5, 6 y 7
+        renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+        renderActivitySteps("activity-6-content", steps[level]["6"], time);
+        renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+        document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+        document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+        document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+    }
+
+    function renderActivitySteps(contentId, steps, time) {
+        var contentContainer = document.getElementById(contentId);
+        contentContainer.innerHTML = "";
+        steps.forEach(function(step) {
+            if (step.time[time] > 0) {
+                var row = document.createElement("tr");
+                var stepCell = document.createElement("td");
+                var dialogCell = document.createElement("td");
+
+                stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                row.appendChild(stepCell);
+                row.appendChild(dialogCell);
+                contentContainer.appendChild(row);
+            }
+        });
+    }
+
+    function calculateTotalTime(steps, time) {
+        return steps.reduce((total, step) => total + step.time[time], 0);
+    }
+
+    updateContent();
+</script>
+
+
+
+
+</body>
+</html>
